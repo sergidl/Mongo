@@ -11,6 +11,7 @@ const dbName = 'sdiaz2_movies';
 export class ManagerFs {
     constructor() {
         this.movies = this.main();
+        client.close();
     }
     async main() {
         // Use connect method to connect to the server
@@ -48,8 +49,6 @@ export class ManagerFs {
         // client.close();
         return deleteResult;
     }
-
-
 }
 
 

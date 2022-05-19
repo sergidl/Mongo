@@ -62,6 +62,7 @@ class MoviesModel {
         movie.createMovie(new_movie);
     }
 
+
     async updateMovie(req) {
         console.log(`---> moviesModel::updateMovie = ${req.id}`);
 
@@ -69,13 +70,13 @@ class MoviesModel {
         if (typeof new_movie == 'undefined')
             throw new Error(messageapp.parameter_not_especified);
 
-       
+
 
         const _movie = await movie.updateMovie(new_movie);
         if (typeof _movie == 'undefined')
             throw new Error(messageapp.movie_error_update);
 
-        
+
 
 
     }
